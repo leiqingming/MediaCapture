@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">分屏</string>
+
+    <!--video-->
+    <string name="play">播放</string>
+    <string name="pause">暂停</string>
+    <string name="loop">循环播放</string>
+    <string name="order">顺序播放</string>
+
+    <string name="search">搜索文件</string>
+
+    <string name="capture">抓拍</string>
+    <string name="description_info">Info</string>
+    <string name="camera_error">此设备不支持Camera2</string>
+
+    <string name="start_record">开始录屏</string>
+    <string name="stop_record">停止录屏</string>
+    <string name="record_video_tip">停止录制</string>
+    <string name="can_not_record_tip">暂时无法录制</string>
+    <string name="record_space_tip">存储空间不足</string>
+    <string name="record_time_end_tip">录制已到限定时长</string>
+
+    <string name="permission_request">This app needs permission for camera and audio recording.</string>
+
+    <string name="intro_message">
+        <![CDATA[
+            This sample demonstrates the basic use of Camera2 API. Check the source code to see how
+            you can display camera preview and take pictures.
+        ]]>
+    </string>
+    <string name="title_activity_video_surface">VideoSurfaceActivity</string>
+
+<!--    some strings-->
+
+    <string name="scan_title">&quot;正在扫描 ...&quot;</string>
+    <string name="scan_tip">&quot;正在扫描，请稍等...&quot;</string>
+
+    <string name="scanning_init">&quot;正在浏览 ...\n\n&quot;</string>
+    <string name="scanning">&quot;正在浏览 ...\n&quot;</string>
+
+    <string name="press_exit_again">再按一次退出</string>
+
+    <string name="tip_choose_file">请选择视频文件</string>
+    <string name="AttachCameraDevice">请接入摄像头设备</string>
+
+    <string name="noCameraDevice">未找到摄像头设备</string>
+
+    <string name="saveFilePath">文件路径: \t</string>
+
+    <string name="noFile">未扫描到文件</string>
+    <string name="noVideoFile">未搜索到视频文件</string>
+
+    <string name="Storage_Mounted">已识别到U盘</string>
+    <string name="Storage_Unmounted">U盘已弹出</string>
+    <string name="Video_Parsing_failed">视频解析失败</string>
+
+    <string name="description">操作</string>
+
+    <string name="title_settings">设置</string>
+    <string name="title_size_settings">尺寸设置</string>
+    <string name="title_speed_settings">速度设置</string>
+
+    <string name="list_search_file">查找视频文件</string>
+    <string name="list_reverse_position">交换位置</string>
+    <string name="list_video_size">视频尺寸</string>
+
+    <string-array name="list_setting">
+        <item>查找视频</item>
+        <item>位置切换</item>
+        <item>播放速度</item>
+        <item>视频尺寸</item>
+        <item>相机尺寸</item>
+    </string-array>
+
+    <string-array name="list_size_setting">
+        <item>原始</item>
+        <item>放大</item>
+    </string-array>
+
+</resources>

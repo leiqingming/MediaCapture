@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/devices_search_fullScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    >
+    <RelativeLayout
+		android:id="@+id/devices_search_title"
+		android:layout_width="fill_parent"
+		android:layout_height="50dp"
+
+		android:background="@color/bg_black"
+		android:orientation="horizontal"
+
+		>
+		<Button
+	        android:id="@+id/back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginStart="8dp"
+
+		    android:textSize="16sp"
+		    android:text="返回" />
+		
+	    <ProgressBar
+			android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+			android:layout_alignParentEnd="true"
+			android:layout_marginEnd="8dp"
+
+            android:layout_centerVertical="true"
+
+            android:indeterminate="false" />
+	    
+	    <Button 
+	        android:id="@+id/refresh"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+	        android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+	        android:layout_marginEnd="8dp"
+
+		    android:textSize="16sp"
+		    android:text="刷新" />
+	    
+    </RelativeLayout>
+
+
+	<ListView
+		android:id="@+id/lvVideo"
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		/>
+
+
+</LinearLayout>

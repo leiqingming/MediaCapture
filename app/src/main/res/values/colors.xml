@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <drawable name="white">#FFFFFFFF</drawable>
+    <drawable name="trans_white">#A0FFFFFF</drawable>
+    <drawable name="black">#000000</drawable>
+    <drawable name="blue">#600000FF</drawable>
+    <drawable name="trans_blue">#6000BFFF</drawable>
+    <drawable name="trans">#00000000</drawable>
+    <drawable name="trans_background">#30FFFFFF</drawable>
+
+    <color name="background">#FF000000</color>
+    <color name="transparent_background">#00000000</color>
+
+    <color name="control_background">#cc4285f4</color>
+    
+    <color name="bg_black">#000</color>
+</resources>

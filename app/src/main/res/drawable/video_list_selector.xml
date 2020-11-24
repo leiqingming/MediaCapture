@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item android:drawable="@drawable/white" android:state_pressed="true" />-->
+<!--    &lt;!&ndash; 这个是默认的item背景色，设为了透明 &ndash;&gt;-->
+<!--    <item android:drawable="@android:color/transparent" android:state_pressed="false" />-->
+
+    <item android:drawable="@drawable/trans_white" android:state_focused="true" />
+
+</selector>

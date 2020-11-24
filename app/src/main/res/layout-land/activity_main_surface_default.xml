@@ -1,0 +1,389 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/bg_full"
+
+
+    >
+
+    <RelativeLayout
+
+        android:id="@+id/RL_ALL_TOP"
+
+        android:layout_width="match_parent"
+        android:layout_height="580dp">
+
+
+        <RelativeLayout
+            android:id="@+id/second_all_center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/video_sfv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_toStartOf="@+id/second_all_center"
+
+            android:padding="5dp"
+            >
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:clipChildren="false"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:padding="3dp"-->
+<!--                >-->
+
+
+                <RelativeLayout
+                    android:id="@+id/RL_SurfaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+
+                    android:layout_centerInParent="true"
+
+                    android:clipChildren = "false"
+                    >
+
+                    <TextView
+                        android:id="@+id/tip_choose_file"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tip_choose_file"
+                        android:textColor="@drawable/white"
+                        android:textSize="25sp"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <com.hxws.mediacapture.view.FixedTextureVideoView
+                        android:id="@+id/video_sfv_show"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+
+                        />
+
+                </RelativeLayout>
+
+<!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/video_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_above="@+id/RL_Video_Operation"
+                android:paddingBottom="10dp"
+                android:paddingStart="5dp"
+                >
+                <!--            android:layout_below="@+id/RL_SurfaceView"-->
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentStart="true"
+
+                    android:text="00:00:00"
+                    android:textColor="#ffffff"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_separate_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_start_time"
+                    android:layout_marginLeft="1dp"
+                    android:text="/"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_separate_time"
+                    android:layout_marginLeft="1dp"
+                    android:text="00:00:00"
+                    android:textColor="#ffffff"/>
+
+                <SeekBar
+                    android:id="@+id/tv_progess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_toEndOf="@+id/tv_end_time"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RL_Video_Operation"
+
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                >
+
+                <Button
+                    android:id="@+id/btn_play_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/play"
+
+                    android:layout_centerInParent="true"
+
+                    android:background="@drawable/rc_button"
+                    />
+                <!--android:background="@drawable/rc_btn_play"-->
+
+                <Button
+                    android:id="@+id/btn_loop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/order"
+
+                    android:background="@drawable/rc_button"
+                    />
+                <!--android:background="@drawable/rc_btn_loop"-->
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/camera_sfv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+
+            android:layout_toEndOf="@+id/second_all_center"
+
+            >
+
+            <!--SurfaceView
+                android:id="@+id/camera_sfv_show"
+                android:layout_width="350dp"
+                android:layout_height="300dp" /-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:layout_centerInParent="true"-->
+
+<!--                android:clipChildren="false"-->
+<!--                android:padding="3dp"-->
+
+<!--                >-->
+
+                <RelativeLayout
+                    android:id="@+id/RL_camera_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+
+                    android:layout_centerInParent="true"
+                    android:clipChildren = "false"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/NoCameraDevice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/AttachCameraDevice"
+                        android:textSize="25sp"
+                        android:textColor="@drawable/white"
+
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible"
+                        />
+
+                    <FrameLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        tools:context=".activity.SplitScreenActivity"
+
+                        android:layout_centerInParent="true"
+
+                        >
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+<!--        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/RL_ALL_TOP"
+
+        android:background="@drawable/frame_line"
+
+        >
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+
+            android:text="@string/title_settings"
+
+            android:background="@drawable/rc_img_btn_settings"
+
+            android:focusedByDefault="true"
+            tools:targetApi="o" />
+
+
+            <!--            <FrameLayout-->
+            <!--                android:id="@+id/videoSurfaceContainer"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                -->
+            <!--                />-->
+
+            <!--            android:layout_alignParentBottom="true"-->
+
+            <RelativeLayout
+                android:id="@+id/RL_Operation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="5dp"
+
+                >
+                <!--            android:layout_below="@+id/video_info"-->
+
+                <RelativeLayout
+                    android:layout_toStartOf="@+id/LL_Operation_Centra"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <ImageButton
+                        android:id="@+id/btn_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+
+                        android:text="@string/search"
+
+                        android:background="@drawable/rc_img_btn_search"
+                        />
+                    <!--android:background="@drawable/rc_btn_find"-->
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/LL_Operation_Centra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    />
+
+                <RelativeLayout
+
+                    android:layout_toEndOf="@+id/LL_Operation_Centra"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btn_cam_reduce_Brightness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="减少亮度"
+
+                        android:background="@drawable/rc_button"
+
+                        android:visibility="gone"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_cam_add_Brightness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="增加亮度"
+
+                        android:background="@drawable/rc_button"
+
+                        android:layout_toEndOf="@+id/btn_cam_reduce_Brightness"
+
+                        android:layout_marginStart="20dp"
+
+                        android:visibility="gone"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btn_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/capture"
+
+                        android:layout_centerInParent="true"
+
+                        android:background="@drawable/rc_img_btn_capture"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_record_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignEnd="@+id/btn_record"
+
+                        android:layout_marginEnd="50dp"
+
+                        android:layout_alignParentBottom="true"
+
+                        android:textSize="25sp"
+                        android:textColor="#FFF"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/btn_record"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/start_record"
+
+                        android:layout_alignParentEnd="true"
+
+                        android:layout_centerVertical="true"
+
+                        android:background="@drawable/rc_img_btn_record"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</RelativeLayout>

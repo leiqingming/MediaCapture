@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    package="com.hxws.mediacapture"
+    xmlns:dist="http://schemas.android.com/apk/distribution">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="droidlogic.permission.SYSTEM_CONTROL" />
+
+    <uses-permission  android:name="android.permission.RECORD_AUDIO"/>
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@drawable/apk_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/apk_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".activity.MainActivity"
+
+            android:screenOrientation="fullSensor"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            >
+
+
+        </activity>
+
+        <service android:name="com.hxws.mediacapture.service.ScreenRecordService"/>
+
+        <receiver android:name=".activity.SplitScreenActivity$MyBroadcastReceiver"
+            android:exported="false"
+            android:enabled="true"
+            tools:ignore="Instantiatable">
+
+        </receiver>
+
+        <activity
+            android:name=".activity.SplitScreenActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            tools:ignore="LockedOrientationActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!--@android:style/Theme.Translucent.NoTitleBar.Fullscreen-->
+
+        <activity android:name=".camera2.Camera2Activity" />
+
+        <activity
+            android:name=".camera1.CustomCameraActivity"
+
+             />
+
+        <receiver android:name=".receiver.USBReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter android:priority="1000">
+
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+
+        </receiver>
+    </application>
+
+</manifest>

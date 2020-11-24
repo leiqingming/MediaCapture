@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="RL_Layout_video_id" type="id"/>
+
+
+    <item name="FL_Layout_camera_id" type="id"/>
+
+
+</resources>

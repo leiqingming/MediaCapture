@@ -1,0 +1,30 @@
+package com.hxws.mediacapture.activity;
+
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
+
+import com.hxws.mediacapture.service.ScreenRecordService;
+
+
+public class RecordApplication extends Application {
+
+    private static RecordApplication application;
+
+    @Override
+    protected void attachBaseContext(Context base) {
+      super.attachBaseContext(base);
+      application = this;
+    }
+
+    @Override
+    public void onCreate() {
+      super.onCreate();
+      // 启动 Marvel service
+      startService(new Intent(this, ScreenRecordService.class));
+    }
+
+    public static RecordApplication getInstance() {
+    return application;
+  }
+}

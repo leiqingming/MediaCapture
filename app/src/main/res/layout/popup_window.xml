@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+
+        android:padding="8dp"
+
+       >
+<!--
+ android:layout_alignParentBottom="true"
+ android:background="@drawable/btn_style_alert_dialog_background"-->
+
+        <!--RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+
+            android:background="@color/bg_black"
+            android:orientation="horizontal"
+
+            -->
+            <!--Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+
+                android:textSize="16sp"
+                android:text="返回" /-->
+
+            <!--ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+
+                android:layout_centerVertical="true"
+
+                android:indeterminate="false" /-->
+
+            <!--Button
+                android:id="@+id/refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+
+                android:textSize="16sp"
+                android:text="refresh" /-->
+
+<!--        </RelativeLayout>-->
+
+
+        <ListView
+            android:id="@+id/lv_popup"
+            android:layout_width="wrap_content"
+
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:listSelector="@drawable/video_list_selector"
+
+            android:divider="@android:color/white"
+            android:descendantFocusability="beforeDescendants"
+            android:dividerHeight="1dp"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
